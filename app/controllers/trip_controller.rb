@@ -1,2 +1,6 @@
-class CitiesController < ApplicationController
+class TripController < ApplicationController
+  def new
+  end
+
+  
 end

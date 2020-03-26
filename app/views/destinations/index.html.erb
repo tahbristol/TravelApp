@@ -1,0 +1,13 @@
+Destinations Index
+
+<table style="width:100%">
+<tbody>
+  <% @destinations.each do |destination| %>
+    <tr>
+        <td><%= link_to "See Destination: #{destination.name}", destination_path(destination) %></td> 
+        <% end %>  
+    </tr> 
+
+</tbody>
+</table>
+<br>

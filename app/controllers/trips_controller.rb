@@ -1,8 +1,10 @@
-class UsersController < ApplicationController
+class TripsController < ApplicationController
     def new
+      @trip = Trip.new
     end
   
     def index
+      @trips = Trip.all
     end
   
     def edit
@@ -10,5 +12,4 @@ class UsersController < ApplicationController
   
     def show
     end
-
 end

@@ -1,0 +1,10 @@
+<h1>Create a Trip</h1>
+<h4>
+<%= form_for :trip, url: '/trips' do |f| %>
+  Trip Name: <%= f.text_field :name %><br><br>
+  Start Date: <%= f.start_date :start_date %><br><br>
+  End Date: <%= f.end_date :end_date %><br><br>
+  
+  <%= f.submit "Submit" %>
+<% end %>
+</h4>

@@ -1,0 +1,20 @@
+<h2> Create a Destination </h2>
+<h4>
+<br>
+<br>
+<%= form_for (@destination) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br>
+  <br>
+  <%= f.label :description %>
+  <%= f.password_field :description %>
+  <br>
+  <br>
+  <%= f.submit "Create Destination" %>
+  <% end %>
+  </h4>

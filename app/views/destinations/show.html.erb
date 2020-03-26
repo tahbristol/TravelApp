@@ -1,0 +1,14 @@
+<h1>Here is your destination</h1>
+<br>
+<br>
+<%= @destination.name %><br>
+<%= @destination.location %><br>
+<%= @destination.description %>
+<br>
+<% @destination.itinerary_items.sort_by(:start_date).each do |itn| %>
+  <%= itn.start_date - itn.end_date %>
+<% end %>
+<br>
+<% link_to "Edit Destination" edit_destination_path(destination) %>
+
+

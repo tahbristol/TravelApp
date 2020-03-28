@@ -1,6 +1,5 @@
-<h2> Create a Destination </h2>
-<h4>
-<br>
+<h4> Create a Destination </h4>
+<h5>
 <br>
 <%= form_for (@destination) do |f| %>
   <%= f.label :name %>
@@ -12,9 +11,11 @@
   <br>
   <br>
   <%= f.label :description %>
-  <%= f.password_field :description %>
+  <%= f.text_field :description %>
   <br>
   <br>
   <%= f.submit "Create Destination" %>
   <% end %>
-  </h4>
+  </h5>
+  <br>
+  <br>

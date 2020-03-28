@@ -1,14 +1,16 @@
-<h1>Here is your destination</h1>
+<h4>Here is your destination:</h4>
 <br>
 <br>
-<%= @destination.name %><br>
-<%= @destination.location %><br>
-<%= @destination.description %>
+<h5>
+<em>Name:</em> <%= @destination.name %><br>
+<em>Location:</em> <%= @destination.location %><br>
+<em>Description:</em> <%= @destination.description %>
 <br>
-<% @destination.itinerary_items.sort_by(:start_date).each do |itn| %>
-  <%= itn.start_date - itn.end_date %>
-<% end %>
+</h5>
 <br>
-<% link_to "Edit Destination", edit_destination_path(destination) %>
+<%= link_to "Edit Destination", edit_destination_path(@destination) %>
+<br>
+<br>
+
 
 

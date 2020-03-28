@@ -1,0 +1,15 @@
+<h5> Edit my Trip: </h5>
+
+<%= form_for (@trip) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :start_date %>
+  <%= f.date_field :start_date %>
+     
+  <%= f.label :end_date %>
+  <%= f.date_field :end_date %>
+    
+  <%= f.submit "Update Trip" %>
+  
+<% end %>

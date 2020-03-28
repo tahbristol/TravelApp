@@ -24,7 +24,12 @@ class TripsController < ApplicationController
       set_trip
     end
 
-      
+    def update
+      set_trip
+      @trip.update(trip_params)
+      redirect_to trip_path(@trip)    
+    end
+          
   private
   
   def set_trip

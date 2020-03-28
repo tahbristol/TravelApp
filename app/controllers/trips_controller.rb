@@ -4,7 +4,7 @@ class TripsController < ApplicationController
     end
   
     def create
-        @trip = Trip.new(trip_params).merge(user_id: @current_user.id)
+        @trip = Trip.create(trip_params.merge(user_id: current_user.id))
         if @trip.save
         redirect_to trip_path(@trip)
         else
@@ -17,9 +17,11 @@ class TripsController < ApplicationController
     end
   
     def edit
+      set_trip
     end
   
     def show
+      set_trip
     end
 
       

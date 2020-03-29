@@ -1,16 +1,22 @@
 <h4>Here are all of your destinations:</h4>
 
+Click on a link to view:
+<br>
+<br>
 <table style="width:100%">
 <tbody>
   <% @destinations.each do |destination| %>
     <tr>
-        <td><%= link_to "See Destination: #{destination.name}", destination_path(destination) %></td> 
+        <td><%= link_to "#{destination.name}", destination_path(destination) %></td> 
         <% end %>  
     </tr> 
 
 </tbody>
 </table>
-
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <%= link_to "Create a new destination", new_destination_path(@destination) %>

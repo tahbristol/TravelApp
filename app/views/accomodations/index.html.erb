@@ -1,0 +1,24 @@
+<h4>Here are all of your accomodation plans:</h4>
+
+Click on a link to view:
+<br>
+<br>
+<table style="width:100%">
+<tbody>
+  <% @accomodation.each do |accomodation| %>
+    <tr>
+        <td><%= link_to "#{accomodation.name}", accomodation_path(accomodation) %></td> 
+        <% end %>  
+    </tr> 
+
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "Create a new accomodation", new_accomodation_path(@accomodation) %>
+<br>
+<br>

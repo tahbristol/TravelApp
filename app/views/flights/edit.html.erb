@@ -1,0 +1,15 @@
+<h5> Edit My Flight: </h5>
+
+<%= form_for (@flight) do |f| %>
+  <%= f.label :airline %>
+  <%= f.text_field :airline %>
+  
+  <%= f.label :flight_info %>
+  <%= f.text_field :flight_info %>
+     
+  <%= f.label :cost %>
+  <%= f.text_field :cost %>
+    
+  <%= f.submit "Update" %>
+  
+<% end %>

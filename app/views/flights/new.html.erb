@@ -1,0 +1,21 @@
+<h4> Enter New Flight: </h4>
+<h5>
+<br>
+<%= form_for (@flight) do |f| %>
+  <%= f.label :airline %>
+  <%= f.text_field :airline %>
+  <br>
+  <br>
+  <%= f.label :flight_info %>
+  <%= f.text_field :flight_info %>
+  <br>
+  <br>
+  <%= f.label :cost %>
+  <%= f.text_field :cost %>
+  <br>
+  <br>
+  <%= f.submit "Create" %>
+  <% end %>
+  </h5>
+  <br>
+  <br>

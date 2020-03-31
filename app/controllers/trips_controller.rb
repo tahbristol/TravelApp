@@ -1,15 +1,19 @@
 class TripsController < ApplicationController
     def new
       @trip = Trip.new
+      @trip = Person.new
+      @trip.destinations.build(destination_type: 'destination_1')
+      @trip.destinations.build(destination_type: 'destination_2')
+      end
     end
   
     def create
-        @trip = Trip.create(trip_params.merge(user_id: current_user.id))
-        if @trip.save
-        redirect_to trip_path(@trip)
-        else
-          render :new    
-        end
+      @trip = Trip.create(trip_params.merge(user_id: current_user.id))
+      if @trip.save
+      redirect_to trip_path(@trip)
+      else
+      render :new    
+      end
     end
 
     def index

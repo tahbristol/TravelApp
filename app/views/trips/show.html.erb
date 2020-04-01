@@ -1,32 +1,16 @@
 <h4> Here is your trip! </h4>
 <br>
+  Trip Name:   <%= @trip.name %><br>
+  Start Date: <%= @trip.start_date %><br>
+  End Date:   <%= @trip.end_date %>
+<br>
+<br>
+<br>  
 
-<tbody>
 <h5>
-  <td>Trip Name<%= @trip.name %>:</td>
-  <br>
-  <tr>Start Date: <%= @trip.start_date %>
-  </tr>End Date: <%= @trip.end_date %>
-  <br>
-  <br>
-</h5>
-  </tbody>
-<h6>
-      Destinations:
-      
-        <%= @trip.destination_1 %>
-        <%= @trip.destination_2 %>
-  
-    <%= f.submit "Submit" %>
-  <% end %>
-  <br>
-  <br>
-  <br>
-  </h6>
-<h3>
   <%= link_to "Add another trip", new_trip_path(@trip) %>
   <br>
   <%= link_to "Edit this trip", edit_trip_path(@trip) %>
   <br>
   <br>
-</h3>
+</h5>

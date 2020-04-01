@@ -1,26 +1,16 @@
 <h3>Create a Trip</h3>
 <br>
-<h6>
+
 <%= form_for @trip do |f| %>
     
   Trip Name: <%= f.text_field :name %><br><br>
   Start Date: <%= f.date_field :start_date %>
   End Date: <%= f.date_field :end_date %><br><br>
-
-
-    Destinations:
+  
     
-      <%= f.fields_for :destinations do |d| %>
-        <%= d.label :destination_1 %>
-        <%= d.text_field :destination_1 %><br>
-    
-        <%= d.label :destination_2 %>
-        <%= d.text_field :destination_2 %><br>
-
-
-  <%= f.submit "Submit" %>
+<%= f.submit %>
 <% end %>
+
 <br>
 <br>
 <br>
-</h6>

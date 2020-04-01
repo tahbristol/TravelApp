@@ -1,10 +1,8 @@
 class TripsController < ApplicationController
     def new
       @trip = Trip.new
-      @trip = Person.new
       @trip.destinations.build(destination_type: 'destination_1')
       @trip.destinations.build(destination_type: 'destination_2')
-      end
     end
   
     def create

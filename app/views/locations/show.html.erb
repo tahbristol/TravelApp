@@ -1,4 +1,4 @@
-<h4> Here is your trip! </h4>
+<h4> Location Added to Trip! </h4>
 <br>
 
   Trip Name:   <%= @trip.name %><br>
@@ -10,11 +10,11 @@ Destinations:
 
 <%= @destinations.each do |d| %>
   <%= d.name %>
-  <%= d.location %> 
   <%= d.description %>
+  <%=
+
   <% end %>
 
-<br>  
 
 <h5>
   <%= link_to "Add another trip", new_trip_path(@trip) %>

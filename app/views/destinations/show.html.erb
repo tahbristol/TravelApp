@@ -3,9 +3,9 @@
 <br>
 <h5>
 <em>Name:</em> <%= @destination.name %><br>
-<em>Location:</em> <%= @destination.location %><br>
 <em>Description:</em> <%= @destination.description %>
 <br>
+<%= link_to "Add a Location", new_location_path(@location) %>
 </h5>
 <br>
 <%= link_to "Edit Destination", edit_destination_path(@destination) %>

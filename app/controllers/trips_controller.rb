@@ -22,7 +22,7 @@ class TripsController < ApplicationController
     end
   
     def show
-      @destinations = Destination.find_by(user_id: current_user)
+      @trip = Trip.find_by(id: params[:id])
     end
 
     def update
@@ -38,9 +38,7 @@ class TripsController < ApplicationController
   end
 
   def trip_params
-    params.require(:trip).permit(:name, :start_date, :end_date, :user_id, :destinations_attributes:[:name,
-      locations_attributes:[:name]])
-      )
+    params.require(:trip).permit(:name, :start_date, :end_date, :user_id, destinations_attributes: [:name])
   end
 end
 

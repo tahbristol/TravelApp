@@ -5,12 +5,15 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   resources :trips
-  resources :destinations
   resources :users
-  resources :flights
-  resources :accomodations
   resources :locations
 
-                          
+  resources :trips do
+    resources :destinations
+  end
+  
+  resources :destinations do
+    resources :locations
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

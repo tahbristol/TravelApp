@@ -1,14 +1,25 @@
-<h2> Here is your information </h2>
+<h4>Hi, <%= current_user.email %></h4>
 
-<h4>
-  <%= @current_user.email %>
-  <br>
-  <br>
-  <%= @current_user.email %>
-  <br>
-  <br>
-  <%= @current_user.trip.end_date %>
-  <br>
-  <br>
-  <br>
-</h4>
+
+<h5>Your Trips</h5>
+
+<ul>
+  <% current_user.trips.each do |trip| %>
+    <li><%=link_to trip.name, trip_path(trip) %></li><br />
+  <% end %>
+</ul>
+
+
+<h5>Your Destinations</h5>
+<ul>
+  <% current_user.destinations.each do |dest| %>
+    <li><%=link_to dest.name, destination_path(dest) %></li><br />
+  <% end %>
+</ul>
+
+<h5>Your Locations</h5>
+<ul>
+  <% current_user.locations.each do |location| %>
+    <li><%=link_to location.name || 'No location name', location_path(location) %></li><br />
+  <% end %>
+</ul>
